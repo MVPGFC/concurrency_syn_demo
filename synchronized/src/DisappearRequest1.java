@@ -18,8 +18,9 @@ public class DisappearRequest1 implements Runnable{
 
     @Override
     public void run() {
+        synchronized (DisappearRequest1.class){
         for (int j = 0; j < 100000; j++) {
             i++;
-        }
+        }}
     }
 }
